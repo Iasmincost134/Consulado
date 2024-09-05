@@ -1,10 +1,12 @@
 new Swiper('.card-wrapper', {
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 10,
   
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
     },
   
     // Navigation arrows

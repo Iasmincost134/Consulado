@@ -10,6 +10,10 @@
     font-family: 'Poppins-Medium';
     src: url('Poppins/Poppins-Medium.ttf');
  }
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('Poppins/Poppins-Light.ttf');
+ }
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -37,8 +41,6 @@ nav ul li {
 }
 
 #LinhaVermelha{
-    /* background-color: #ff0000; */
-     /* Cor de fundo do header */
      background: rgb(225,1,1);
 background: linear-gradient(to bottom, rgba(225,1,1,1) 0%, rgba(143,0,0,1) 100%);
     color: white;
@@ -197,32 +199,43 @@ h5{
 .card-list .card-item .card-link{
     user-select: none;
     display: block;
-    width: 20rem;
-    background: #808080;
+    /* width: 14rem; */
+    /* background: #ffffff; */
     padding: 18px;
     border-radius: 12px;
     text-decoration: none;
     border: 2px solid transparent;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     transition: 0.2 ease;
+    margin: 0 10px;
+}
+
+.card-wrapper{
+    max-width: 60%;
+    margin: 0 auto; 
+    padding: 20px 250px;
+    width: 500px;
+    overflow: hidden;
 }
 .card-list .card-item .card-link:hover{
-border-color: #5372F0;
+border-color: #a29f9f;
 }
 
 .card-list .card-item .card-image{
     width: 100%;
     aspect-ratio: 16 / 9;
+    /* height: 400px; */
     object-fit: cover;
     border-radius: 10px;
 }
 
 .card-list .card-item .badge{
-    color: #000f;
+    color: #fff;
     margin: 16px 0 18px;
-    padding: 8px 16px;
+    padding: 4px 10px;
     font-size: 0.95rem;
-    background: #dde4ff;
+    background: #dc5a5a;
     width: fit-content;
     border-radius: 50px;
 }
@@ -231,14 +244,22 @@ border-color: #5372F0;
     color: #000;
     font-weight: 600;
 }
+.card-list .card-link .card-subtitle{
+    font-size: 1rem;
+    color: #454545;
+    /* font-family: 'Poppins'; */
+    font-family: 'Poppins-Light';
+    /* font-family: 'Poppins-Medium'; */
+    /* font-weight: 600; */
+}
 
 .card-list .card-link .card-button{
     height: 35px;
     width: 35px;
-    color: #5372F0;
+    color: #f05353;
     border-radius: 50%;
     margin: 20px 0 5px;
-    border: 2px solid #5372F0;
+    border: 2px solid #f05353;
     transform: rotate(-45deg);
     background: none;
     cursor: pointer;
@@ -247,5 +268,37 @@ border-color: #5372F0;
 
 .card-list .card-link:hover .card-button{
     color: #fff;
-    background: #5372F0;
+    background: #f05353;
+}
+
+/* travel gallery */
+.boll{
+    width: 20px; 
+    height: 20px; 
+    background-color: #B30A0A;
+    border-radius: 50%;
+    display: inline-block; 
+}
+
+.gallery-text{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaçamento entre a bolinha e o texto */
+    padding: 10px; /* Adiciona um pouco de espaço interno */
+}
+
+#gallery {
+    background-color: #F0F0F2;
+    margin-top: 20px;
+    width: 100%; /* Ocupa 100% da largura disponível da página */
+    padding: 50px 0; /* Padding apenas em cima e embaixo */
+}
+
+/* Remove o limite de largura dentro de #gallery */
+#gallery .content {
+    max-width: 100%; /* Remove o limite de largura */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Padding lateral */
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
 }
